@@ -43,7 +43,7 @@ footer {
   background-color: darkorchid;
 }
  
-@media (min-width: 600px) and (max-width: 1000px) {
+@media (min-width: 600px) and (max-width: 1500px) {
   main {
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: 150px
@@ -58,17 +58,15 @@ footer {
   }
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1501px) {
   main {
     grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: 150px
-      100px
+    grid-template-rows: 200px
       1fr
       100px;
     grid-template-areas:
       "my-header my-header my-header"
-      "my-nav my-nav my-nav"
-      "my-aside my-section my-section"
+      "my-nav my-section my-aside"
       "my-footer my-footer my-footer"
   }
 }
