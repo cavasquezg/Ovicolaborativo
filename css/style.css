@@ -2,7 +2,7 @@ main {
   color: white;
   font-family: 'Franklin Gothic Book', arial;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 100%;
@@ -21,11 +21,14 @@ main {
  
 header {
   grid-area: my-header;
+  color: #F47920;
   text-align: right;
-  background-image: url("../img/Logo_unad.png");
+  background-image: url("../img/Logo_unad.png"), url(../img/bannerb.png);
   background-repeat: no-repeat;
-  background-position: left;
+  background-size: 170px, cover;
+  background-position: left, center;
   background-color: #B3B3B3;
+  padding: 0 30px; 
 }
  
 nav {
@@ -36,16 +39,20 @@ nav {
 aside {
   grid-area: my-aside;
   background-color: #F0B429;
+  padding: 10px;
+  margin: 5px 5px 5px 0;
 }
  
 section {
   grid-area: my-section;
   background-color: #808080;
+  padding: 0 10px;
 }
  
 footer {
   grid-area: my-footer;
   background-color: #333333;
+  padding: 10px;
 }
  
 @media (min-width: 600px) and (max-width: 1500px) {
@@ -74,4 +81,71 @@ footer {
       "my-nav my-section my-aside"
       "my-footer my-footer my-footer"
   }
+}
+
+/* menu */
+
+#menu ul {
+ list-style:none;
+ margin:0;
+ padding:0;
+}
+
+/* enlaces del menu */
+
+#menu ul a {
+ display:block;
+ color:#fff;
+ text-decoration:none;
+ font-weight:400;
+ font-size:20px;
+ padding:10px; 
+ text-transform:uppercase;
+ letter-spacing:1px;
+}
+
+/* items del menu */
+
+#menu ul li {
+ position:relative;
+ float: left;
+ margin:4px;
+ padding:0;
+}
+
+/* efecto al pasar el ratón por los items del menu */
+
+#menu ul li:hover {
+ background:#5b78a7;
+}
+
+/* menu desplegable */
+
+#menu ul ul {
+ display:none;
+ position:absolute;
+ top:100%;
+ left:0;
+ background-color: #005883;
+ padding:0;
+}
+
+/* items del menu desplegable */
+
+#menu ul ul li {
+ float:none;
+ width:150px
+}
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+ line-height:120%;
+ padding:10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover > ul {
+ display:block;
 }
